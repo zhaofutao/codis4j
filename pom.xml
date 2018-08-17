@@ -16,6 +16,7 @@
 		<project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
 		<maven.compile.encoding>UTF-8</maven.compile.encoding>
 		<curator.version>4.0.0</curator.version>
+		<zookeeper.version>3.4.9</zookeeper.version>
 		<jedis.version>2.9.0</jedis.version>
 	</properties>
 
@@ -40,6 +41,11 @@
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.zookeeper</groupId>
+			<artifactId>zookeeper</artifactId>
+			<version>${zookeeper.version}</version>
 		</dependency>
 	</dependencies>
 	<build>
