@@ -1,4 +1,4 @@
-package codis4j.util;
+package com.zhaofutao.codis4j.util;
 
 import java.util.Random;
 

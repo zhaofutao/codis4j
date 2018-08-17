@@ -1,15 +1,16 @@
-package codis4j.client;
+package com.zhaofutao.codis4j.client;
 
 import java.nio.ByteBuffer;
 
-import codis4j.CodisConnectionHandler;
+import com.zhaofutao.codis4j.CodisConnectionHandler;
+
 import redis.clients.jedis.Jedis;
 
-public abstract class CodisSetCommand<T> {
+public abstract class CodisGetCommand<T> {
 	private int maxRetryTime = 3;
 	private CodisConnectionHandler connectionHandler;
 
-	public CodisSetCommand(CodisConnectionHandler connectionHandler, int maxRetryTime) {
+	public CodisGetCommand(CodisConnectionHandler connectionHandler, int maxRetryTime) {
 		this.connectionHandler = connectionHandler;
 		this.maxRetryTime = maxRetryTime;
 	}
@@ -37,10 +38,10 @@ public abstract class CodisSetCommand<T> {
 		int retry = 0;
 		while (retry++ < this.maxRetryTime) {
 			try {
-				jedis = connectionHandler.getConnection(groupId, true);
+				jedis = connectionHandler.getConnection(groupId, false);
 				return execute(jedis);
 			} catch (Exception e) {
-				System.out.println(String.format("CodisSetCommand retry[%d], groupId[%d]", retry, groupId));
+				System.out.println(String.format("CodisGetCommand retry[%d], groupId[%d]", retry, groupId));
 				// e.printStackTrace();
 			} finally {
 				releaseConnection(jedis);

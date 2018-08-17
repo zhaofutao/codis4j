@@ -1,11 +1,12 @@
-package codis4j.client;
+package com.zhaofutao.codis4j.client;
 
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-import codis4j.CodisConnectionHandler;
+import com.zhaofutao.codis4j.CodisConnectionHandler;
+
 import redis.clients.jedis.Jedis;
 
 public abstract class CodisMSetCommand<T> {

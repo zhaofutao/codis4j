@@ -1,4 +1,4 @@
-package codis4j.model;
+package com.zhaofutao.codis4j.model;
 
 public class Promoting {
 	private int index;

@@ -1,12 +1,13 @@
-package codis4j;
+package com.zhaofutao.codis4j;
 
 import static org.apache.curator.framework.imps.CuratorFrameworkState.LATENT;
 
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
 
-import codis4j.connection.BoundedExponentialBackoffRetryUntilElapsed;
-import codis4j.connection.DirectCodisConnectionHandleImpl;
+import com.zhaofutao.codis4j.connection.BoundedExponentialBackoffRetryUntilElapsed;
+import com.zhaofutao.codis4j.connection.DirectCodisConnectionHandleImpl;
+
 import redis.clients.jedis.JedisPoolConfig;
 import redis.clients.jedis.Protocol;
 

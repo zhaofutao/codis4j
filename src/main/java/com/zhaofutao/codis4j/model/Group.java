@@ -1,8 +1,8 @@
-package codis4j.model;
+package com.zhaofutao.codis4j.model;
 
 import java.util.List;
 
-import codis4j.util.RandomUtil;
+import com.zhaofutao.codis4j.util.RandomUtil;
 
 public class Group {
 	private int id;

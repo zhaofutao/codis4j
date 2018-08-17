@@ -1,4 +1,4 @@
-package codis4j.client;
+package com.zhaofutao.codis4j.client;
 
 import java.nio.ByteBuffer;
 import java.util.HashMap;
@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import codis4j.CodisConnectionHandler;
+import com.zhaofutao.codis4j.CodisConnectionHandler;
 
 import java.util.Set;
 

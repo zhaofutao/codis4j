@@ -1,4 +1,4 @@
-package codis4j;
+package com.zhaofutao.codis4j;
 
 import java.io.Closeable;
 import java.nio.ByteBuffer;

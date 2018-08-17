@@ -1,4 +1,4 @@
-package codis4j.connection;
+package com.zhaofutao.codis4j.connection;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -18,12 +18,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.zhaofutao.codis4j.CodisConnectionHandler;
+import com.zhaofutao.codis4j.model.Group;
+import com.zhaofutao.codis4j.model.GroupServer;
+import com.zhaofutao.codis4j.model.Slot;
+import com.zhaofutao.codis4j.util.CRC32Util;
 
-import codis4j.CodisConnectionHandler;
-import codis4j.model.Group;
-import codis4j.model.GroupServer;
-import codis4j.model.Slot;
-import codis4j.util.CRC32Util;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
