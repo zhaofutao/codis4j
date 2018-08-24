@@ -19,6 +19,44 @@
 		<zookeeper.version>3.4.9</zookeeper.version>
 		<jedis.version>2.9.0</jedis.version>
 	</properties>
+	
+	<licenses>
+		<license>
+			<name>The MIT License</name>
+			<url>http://opensource.org/licenses/MIT</url>
+		</license>
+	</licenses>
+	
+	<scm>
+		<tag>master</tag>
+		<connection>scm:git:git@github.com:zhaofutao/codis4j.git</connection>
+		<developerConnection>scm:git:git@github.com:zhaofutao/codis4j</developerConnection>
+		<url>git@github.com:zhaofutao/codis4j</url>
+	</scm>
+	
+	<developers>
+		<developer>
+			<name>zhaofutao</name>
+			<email>zhaofutao@zhaofutao.com</email>
+			<organization>zhaofutao.com</organization>
+		</developer>
+	</developers>
+	
+	<profiles>
+		<profile>
+			<id>release</id>
+			<distributionManagement>
+				<snapshotRepository>
+					<id>sonatype-nexus-snapshots</id>
+					<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+				</snapshotRepository>
+				<repository>
+					<id>sonatype-nexus-staging</id>
+					<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+				</repository>
+			</distributionManagement>
+		</profile>
+	</profiles>
 
 	<dependencies>
 		<dependency>
@@ -58,6 +96,20 @@
 					<source>1.8</source>
 					<target>1.8</target>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<version>1.6</version>
+				<executions>
+					<execution>
+						<id>sign-artifacts</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
