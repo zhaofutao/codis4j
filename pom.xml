@@ -5,11 +5,12 @@
 
 	<groupId>com.zhaofutao</groupId>
 	<artifactId>codis4j</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.4</version>
 	<packaging>jar</packaging>
 
 	<name>codis4j</name>
 	<url>http://maven.apache.org</url>
+	<description>a codis java client which can connect codis-server without proxy</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -89,9 +90,36 @@
 	<build>
 		<plugins>
 			<plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>3.0.1</version>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>jar-no-fork</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <!-- Javadoc -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <version>3.0.1</version>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.7.0</version>
+				<version>3.8.0</version>
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
