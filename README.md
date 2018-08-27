@@ -12,5 +12,8 @@ a codis java client which can connect codis-server without proxy
         <a href="https://maven-badges.herokuapp.com/maven-central/com.zhaofutao/codis4j/">
             <img src="https://maven-badges.herokuapp.com/maven-central/com.zhaofutao/codis4j/badge.svg" >
         </a>
+         <a href="https://github.com/zhaofutao/codis4j/releases">
+             <img src="https://img.shields.io/github/release/zhaofutao/codis4j.svg" >
+         </a>
     </p>    
 </p>
