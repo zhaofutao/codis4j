@@ -3,8 +3,8 @@ a codis java client which can connect codis-server without proxy
 
 <p align="center">
     <p align="center">
-         <a href="http://www.gnu.org/licenses/gpl-3.0.html">
-             <img src="https://img.shields.io/badge/license-GPLv3-blue.svg" >
+         <a href="https://github.com/zhaofutao/codis4j/blob/master/LICENSE">
+             <img src="https://img.shields.io/badge/license-MIT-000000.svg" >
          </a>
         <a href="https://travis-ci.org/zhaofutao/codis4j">
             <img src="https://travis-ci.org/zhaofutao/codis4j.svg?branch=master" >
